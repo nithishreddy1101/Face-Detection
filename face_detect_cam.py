@@ -1,11 +1,11 @@
 import cv2 as cv 
 
 
-capture=cv.VideoCapture(0) #0 for webcam 1 for first cam and 2 for 2nd cam connected
-haar_cascade=cv.CascadeClassifier('C:\\Users\\nithi\\AppData\\Roaming\\Python\\Python312\\site-packages\\cv2\\data\\haarcascade_frontalface_default.xml')
+capture=cv.VideoCapture(0) #0 for webcam, 1 for first cam and 2 for 2nd cam connected
+haar_cascade=cv.CascadeClassifier('haarcascade_frontalface_default.xml')
 while True:
     isTrue,frame =capture.read()
-    gray=cv.cvtColor(frame,cv.COLOR_BGR2GRAY)
+    gray=cv.cvtColor(frame,cv.COLOR_BGR2GRAY) #converts color image into gray image
     faces_rect=haar_cascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=3)
     for (x,y,w,h) in faces_rect:
         
