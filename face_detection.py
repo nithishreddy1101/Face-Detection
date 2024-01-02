@@ -1,8 +1,9 @@
 import cv2 as cv
 import numpy as np 
 
-img =cv.imread("Photos\\group.jpeg")
-cv.imshow("Peacock",img)
+img =cv.imread("File path") #for example img =cv.imread("Photos\\group.jpeg")
+
+cv.imshow("File Name(random)",img)
 
 
 gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
